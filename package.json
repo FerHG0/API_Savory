@@ -1,7 +1,6 @@
 {
   "name": "dwi",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon server.js"
@@ -9,7 +8,7 @@
   "keywords": [],
   "author": "Carlos Fernando Herrera García",
   "license": "ISC",
-  "type": "commonjs",
+  "description": "",
   "dependencies": {
     "express": "^5.1.0",
     "mongoose": "^8.16.1"
