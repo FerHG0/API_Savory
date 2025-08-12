@@ -1,10 +1,22 @@
 const express =  require('express');
 const app = express();
-const routerPalapa = require('./routes/palapaRouter')
+const routerMenu = require('./routes/menuRouter')
+const cors = require('cors')
+const fs = require('fs');
+const path = require('path');
+
 
 app.use(express.urlencoded({extended:false}));
 app.use (express.json());
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-app.use('/palapa', routerPalapa);
+app.use(cors({
+  origin: '*',
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true,
+  maxAge: 86400
+}));
+app.use('/savory', routerMenu);
 
 module.exports=app;

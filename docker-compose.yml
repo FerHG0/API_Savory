@@ -6,7 +6,7 @@ services:
     depends_on:
       - mongo
     environment:
-      - MONGO_URL=mongodb://mongo:27017/pruebarest91
+      - MONGO_URL=mongodb://mongo:27017/restaurante_savory
     volumes:
       - .:/app
 

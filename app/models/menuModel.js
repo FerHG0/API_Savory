@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const { type } = require('os');
 
-const palapaSchema = new mongoose.Schema({
+const comidaSchema = new mongoose.Schema({
     name:{
         type:String,
         required:true
@@ -17,18 +17,12 @@ const palapaSchema = new mongoose.Schema({
         required:true
     },
 
-    capacidad:{
-        type:Number,
+    imagenURL:{
+        type:String,
         required:true
-    },
-
-    existencia:{
-        type:Number,
-        default:10
     }
-
 })
 
-const palapaModel = mongoose.model('bebidas',palapaSchema);
+const menuModel = mongoose.model('menu', comidaSchema);
 
-module.exports = palapaModel
+module.exports = menuModel
